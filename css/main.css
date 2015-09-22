@@ -1,0 +1,40 @@
+/*body{
+	background-image:url("../images/back.png");
+	background-repeat: no-repeat;
+}*/
+
+.cell{
+	border-right: 1px solid lightgrey;
+	border-bottom: 1px solid lightgrey;
+	height: 50px;
+	background-color: #fff;
+}
+
+#board{
+	width: 600px;
+	border-left: 1px solid lightgrey;
+	border-top: 1px solid lightgrey;
+
+}
+
+body, .block, .homer, .donut{
+	background-position: center;
+	background-size: cover;
+}
+
+
+.block{
+	background-image:url("../images/block.png");
+}
+
+.homer{
+	background-image:url("../images/homer.png"); 
+}
+
+.donut{
+	background-image:url("../images/donut.png"); 
+}
+
+/*.wall{
+	background-image:url("../images/wall.png");  
+}*/
