@@ -1,4 +1,4 @@
-<script type="text/javascript">
+
 
 		$(function(){
 			
@@ -161,8 +161,8 @@
 
 					var rand = 0;
 
-					while(rand > 144 || rand < 1){
-						rand = Math.floor(Math.random()*144);
+					while(rand > square*square || rand < 1){
+						rand = Math.floor(Math.random()*square);
 					}
 
 					cellRandBlock = $('#cell-'+ rand.toString());
@@ -178,8 +178,8 @@
 				
 				var rand = 0;
 
-				while(rand > 144 || rand < 1 || $('#cell-'+ rand.toString()).hasClass('block') || $('#cell-'+ rand.toString()).hasClass('donut') || $('#cell-'+ rand.toString()).hasClass('homer')){
-					rand = Math.floor(Math.random()*144);
+				while(rand > square*square || rand < 1 || $('#cell-'+ rand.toString()).hasClass('block') || $('#cell-'+ rand.toString()).hasClass('donut') || $('#cell-'+ rand.toString()).hasClass('homer')){
+					rand = Math.floor(Math.random()*square*square);
 				}
 
 				cellRandBlock = $('#cell-'+ rand.toString());
@@ -199,8 +199,8 @@
 					rand = 0;
 
 					// while OOB or used get another rand number
-					while(rand > 144 || rand < 1 || $('#cell-'+ rand.toString()).hasClass('block')){
-						rand = Math.floor(Math.random()*144);
+					while(rand > square*square || rand < 1 || $('#cell-'+ rand.toString()).hasClass('block')){
+						rand = Math.floor(Math.random()*square*square);
 
 					}
 
@@ -215,7 +215,7 @@
 			function placeRandomHomer(){
 				var rand = 0;
 				// while rand is out of bounds
-				while(rand > 144 || rand < 1 || $('#cell-'+ rand.toString()).hasClass('donut') || $('#cell-'+ rand.toString()).hasClass('block')){
+				while(rand > square*square || rand < 1 || $('#cell-'+ rand.toString()).hasClass('donut') || $('#cell-'+ rand.toString()).hasClass('block')){
 					rand =  Math.floor(Math.random()*100);
 				}
 
@@ -255,7 +255,7 @@
 					var cell = $('#cell-'  + i.toString());
 					cell.addClass('limit-left');
 				}
-				for (var a = 12; a <= square * square ; a+=square) {
+				for (var a = square; a <= square * square ; a+=square) {
 
 					var cell = $('#cell-'  + a.toString());
 					cell.addClass('limit-right');
@@ -302,5 +302,3 @@
 
 
 		});
-
-</script>
